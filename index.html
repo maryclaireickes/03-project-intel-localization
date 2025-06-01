@@ -32,17 +32,17 @@
   <!-- Timeline Cards Section -->
   <section>
     <!-- Bootstrap container for layout -->
-    <div class="container">
-      <!-- First row of cards -->
-      <div class="row mt-4">
-        <!-- Card 1 -->
+    <div class="container" style="padding-left: 40px; padding-right: 40px; padding-top: 24px; padding-bottom: 24px;">
+      <!-- All cards are now in a single row for horizontal scrolling on small screens -->
+      <div class="row mt-4 flex-nowrap overflow-auto">
         <!-- 
           col-12: full width on small screens
           col-md-6: half width (2 per row) on medium screens
-          col-lg-4: one third width (3 per row) on large screens
+          col-lg-3: one fourth width (4 per row) on large screens
           mb-4: adds margin below each card for spacing
         -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
           <div class="card">
             <h2>1968</h2>
             <h3>Intel Founded</h3>
@@ -55,7 +55,7 @@
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
           <div class="card">
             <h2>1971</h2>
             <h3>First Microprocessor</h3>
@@ -68,7 +68,7 @@
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
           <div class="card">
             <h2>1978</h2>
             <h3>8086 Processor</h3>
@@ -79,11 +79,8 @@
             </p>
           </div>
         </div>
-      </div>
-      <!-- Second row of cards -->
-      <div class="row mt-4">
         <!-- Card 4 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
           <div class="card">
             <h2>1985</h2>
             <h3>386 Processor</h3>
@@ -96,7 +93,7 @@
           </div>
         </div>
         <!-- Card 5 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
           <div class="card">
             <h2>2006</h2>
             <h3>Peak GHG Emissions</h3>
@@ -110,7 +107,7 @@
           </div>
         </div>
         <!-- Card 6 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
           <div class="card">
             <h2>2020</h2>
             <h3>RISE Strategy</h3>
@@ -122,11 +119,8 @@
             </p>
           </div>
         </div>
-      </div>
-      <!-- Third row of cards -->
-      <div class="row mt-4">
         <!-- Card 7 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
           <div class="card">
             <h2>2022</h2>
             <h3>Net-Zero By 2040</h3>
@@ -139,7 +133,7 @@
           </div>
         </div>
         <!-- Card 8 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
           <div class="card">
             <h2>2023</h2>
             <h3>Renewable Electricity</h3>
@@ -152,7 +146,7 @@
           </div>
         </div>
         <!-- Card 9 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
           <div class="card">
             <h2>2024</h2>
             <h3>Sustainability Summit</h3>
@@ -167,6 +161,53 @@
       </div>
     </div>
   </section>
+  
+  <div class="container text-left">
+  <div class="row">
+    <div class="col-3 col-md-6 col-lg-4">
+      <h2>RISE Strategy</h2>
+        <p>
+          Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+          Intel sets ambitious 2030 goals, including driving industry-wide 
+          progress on climate action, water stewardship, and waste reduction.
+        </p>
+        <!-- Learn More Button -->
+        <a href="#">Learn More</a>
+    </div>
+     <div class="col-3 col-md-6 col-lg-4">
+        <h2>Commitment</h2>
+        <p>
+          In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+          (Scope 1 and 2) by 2040. This commitment builds on decades of 
+          environmental initiatives and partnerships across the semiconductor 
+          industry.
+        </p>
+        <!-- Learn More Button -->
+        <a href="#">Learn More</a>
+    </div>
+    <div class="col">
+      <h2>Water &amp; Waste</h2>
+        <p>
+          Intel conserves billions of gallons of water annually and 
+          collaborates with local communities to restore watersheds.
+          Intel also upcycles and recycles materials to reduce waste and 
+          advance a circular economy.
+        </p>
+        <!-- Learn More Button -->
+        <a href="#">Learn More</a>
+    </div>
+  </div>
+</div>
+<section>
+
+  <!-- Subscription Form -->
+  <section>
+    <h2>Subscribe to our Newsletter</h2>
+    <!-- Add form here -->
+  </section>
+
+
+
   <!-- Centered message below the timeline -->
   <div style="max-width: 600px; margin: 24px auto; text-align: center;">
     <p>Scroll to view timeline | Hover over cards to learn more!</p>
