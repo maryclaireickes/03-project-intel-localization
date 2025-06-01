@@ -1,0 +1,218 @@
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+/* Set Montserrat as the font for the whole page */
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Add your CSS here */
+
+/* Hero section with a blue gradient background */
+.hero {
+  /* Blue gradient: dark blue on the left, Pantone 285 C (#0072CE) on the right */
+  background: linear-gradient(to right, #003366, #0072ce);
+  /* Add some space inside the hero section */
+  padding: 40px 20px;
+  /* Center all text and images */
+  text-align: center;
+  /* Make the corners a little rounded */
+  border-radius: 0px;
+  /* Add space below the hero section */
+  margin-bottom: 30px;
+  /* Make the hero section extend to the full width of the page */
+  width: 100%;
+}
+
+/* Make the Intel logo a bit smaller and add space below */
+.hero img {
+  width: 15%;
+  align: center;
+  margin-bottom: 20px;
+}
+
+/* Make the main heading white for contrast */
+.hero h1 {
+  color: white;
+  margin-bottom: 10px;
+  /* Use the modern tech font for the main heading */
+  font-family: 'Montserrat', monospace;
+  max-width: 50%;
+  text-align: center;
+  /* Center the h1 horizontally */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Make the subheading text white and easy to read */
+.hero p {
+  color: #e0f7fa;
+  font-size: 1.1em;
+  /* Center the subheading and limit its width to about 50% */
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Use Montserrat font for all headers for a modern look */
+h1, h2, h3 {
+  font-family: 'Montserrat', 'IntelOneMono', monospace;
+}
+
+/* Cards container: show 4 cards at a time and scroll horizontally */
+.cards-container {
+  /* Use flexbox to arrange cards in a row */
+  display: flex;
+  /* Allow horizontal scrolling if there are more than 4 cards */
+  overflow-x: auto;
+  /* Add scroll snap for horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap horizontally, required for beginners */
+  /* Add some space between the cards */
+  gap: 20px;
+  /* Add padding so cards don't touch the edges */
+  padding: 20px 0;
+  /* Prevent cards from wrapping to the next line */
+  flex-wrap: nowrap;
+  /* Limit the width so only 4 cards are visible at a time */
+  max-width: 1080px; /* 4 cards * 250px + 3 gaps * 20px = 1080px */
+  /* Center the cards container on the page */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Each card: set a fixed width so 4 fit on the screen */
+.card {
+  /* Set the width and height so all cards and overlays are the same size */
+  min-width: 250px;
+  max-width: 250px;
+  width: 250px;
+  height: 250px;     /* Make the card height equal to its width for a square shape */
+  /* Add a background color for visibility */
+  background: #ebeced;
+  /* Add rounded corners */
+  border-radius: 10px;
+  /* Add a little shadow for depth */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  /* Add some space inside each card */
+  padding: 16px;
+  /* Make sure cards don't shrink too small */
+  flex: 0 0 auto;
+  /* Center text inside the card */
+  text-align: left; /* Align card text to the left */
+  position: relative; /* Needed for overlay positioning */
+  overflow: hidden;   /* Ensures overlay stays inside card corners */
+  /* Snap each card to the start of the container */
+  scroll-snap-align: start; /* Snap each card to the start of the container */
+}
+
+/* Make images inside cards fit nicely */
+.card img {
+  /* Set a fixed width and height for all images to keep them the same size */
+  width: 100%;
+  height: 120px; /* You can adjust this value as needed */
+  object-fit: cover; /* Crop the image to fill the area without stretching */
+  border-radius: 6px;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Overlay: position the description over the entire card */
+.card p {
+  /* Hide by default */
+  opacity: 0;
+  visibility: hidden;
+  /* Position absolutely over the entire card */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Overlay matches the card's height */
+  /* Overlay background for readability */
+  background: rgba(0, 51, 102, 0.96);
+  color: white;
+  /* Center the text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; /* Match card's border radius */
+  box-sizing: border-box;
+  transition: opacity 0.3s;
+  padding: 15px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Show the overlay when the card is hovered */
+.card:hover p {
+  opacity: 1;
+  scale: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Make h2 in cards bold and blue */
+.card h2 {
+  color: #003366; /* Same as background */
+  font-weight: bold; /* Make text bold */
+}
+
+/* Make the card slightly bigger and add a shadow when hovered */
+.card:hover {
+  transform: scale(1.05); /* Grows the card by 5% */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15); /* Adds a bigger shadow */
+}
+
+/* Responsive: Make h1 smaller on small screens */
+@media (max-width: 600px) {
+  .hero h1 {
+    /* Set font size to 22px for small screens */
+    font-size: 22px;
+    /* Make the heading take up 50% of the width */
+    width: 50%;
+    /* Center the heading horizontally */
+    margin-left: auto;
+    margin-right: auto;
+    /* Keep text centered */
+    text-align: center;
+    /* Optional: prevent the heading from being too small */
+    min-width: 180px;
+  }
+  .hero p {
+    font-size: 14px;
+    max-width: 50%;
+  }
+  .cards-container {
+    /* Stack cards vertically on small screens */
+    flex-direction: column;
+    max-width: 100%;
+    gap: 20px;
+    align-items: center; /* Center cards horizontally */
+  }
+  .card {
+    /* Make cards take full width on small screens */
+    min-width: 90%;
+    max-width: 90%;
+    width: 90%;      /* Make card width responsive */
+    height: 90vw;    /* Make card height equal to its width for a square shape */
+    max-height: 90vw;
+    min-height: 200px; /* Optional: set a minimum height for very small screens */
+  }
+  .hero img {
+    /* Make the Intel logo smaller on small screens */
+    width: 30%;
+  }
+  .hero {
+    /* Reduce padding in the hero section on small screens */
+    padding: 20px 10px;
+  }
+  .card img {
+    /* Make the image fill the card width and height on small screens */
+    width: 100%;
+    height: 60vw; /* Make image height responsive to screen width */
+    max-height: 60vw; /* Optional: limit max height for very tall images */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-top: 10px;
+    display: block;
+  }
+}
