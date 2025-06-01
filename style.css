@@ -156,6 +156,11 @@ h1, h2, h3 {
   font-weight: bold; /* Make text bold */
 }
 
+/* Make h3 headings a bit smaller for card subtitles */
+.card h3 {
+  font-size: 1.1em; /* You can adjust this value as needed */
+}
+
 /* Make the card slightly bigger and add a shadow when hovered */
 .card:hover {
   transform: scale(1.05); /* Grows the card by 5% */
