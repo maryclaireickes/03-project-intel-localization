@@ -142,6 +142,8 @@ h1, h2, h3 {
   pointer-events: none;
 }
 
+
+
 /* Show the overlay when the card is hovered */
 .card:hover p {
   opacity: 1;
@@ -165,6 +167,10 @@ h1, h2, h3 {
 .card:hover {
   transform: scale(1.05); /* Grows the card by 5% */
   box-shadow: 0 4px 16px rgba(0,0,0,0.15); /* Adds a bigger shadow */
+}
+a {color: #003366;
+  font-weight: bold;
+  hover: #003388;
 }
 
 /* Responsive: Make h1 smaller on small screens */
