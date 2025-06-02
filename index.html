@@ -227,5 +227,31 @@
       </p>
     </div>
   </footer>
+
+  <!-- JavaScript to detect Google Translate language changes and set RTL/LTR -->
+  <script>
+    // List of right-to-left language codes
+    var rtlLangs = ['ar', 'he', 'fa', 'ur'];
+
+    // Function to check and update the direction
+    function updateDirection() {
+      // Google Translate sets a cookie called "googtrans"
+      var match = document.cookie.match(/googtrans=\/[a-zA-Z-]+\/([a-zA-Z-]+)/);
+      var lang = match ? match[1].toLowerCase() : document.documentElement.lang.toLowerCase();
+
+      // If the language is in the RTL list, set dir="rtl", else dir="ltr"
+      if (rtlLangs.some(function(code) { return lang.startsWith(code); })) {
+        document.documentElement.setAttribute('dir', 'rtl');
+      } else {
+        document.documentElement.setAttribute('dir', 'ltr');
+      }
+    }
+
+    // Run on page load
+    updateDirection();
+
+    // Check every second for language changes (works for Google Translate)
+    setInterval(updateDirection, 1000);
+  </script>
 </body>
 </html>
