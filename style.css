@@ -241,3 +241,8 @@ a {color: #003366;
     margin-bottom: 20px;
   }
 }
+
+/* This targets only the newsletter section paragraph */
+.newsletter-section p {
+  font-style: italic; /* Makes the text italic */
+}
