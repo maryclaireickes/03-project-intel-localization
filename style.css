@@ -5,6 +5,10 @@
 body {
   font-family: 'Montserrat', Arial, sans-serif;
 }
+.newsletter-title {
+  text-align: center;
+  padding: 40px 20px;
+}
 
 /* Add your CSS here */
 
@@ -26,7 +30,7 @@ body {
 
 /* Make the Intel logo a bit smaller and add space below */
 .hero img {
-  width: 15%;
+  width: 10%;
   align: center;
   margin-bottom: 20px;
 }
