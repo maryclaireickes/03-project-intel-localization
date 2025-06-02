@@ -178,7 +178,7 @@ a {color: #003366;
 }
 
 /* Responsive: Make h1 smaller on small screens */
-@media (max-width: 770px) {
+@media (max-width: 768px) {
   .hero h1 {
     /* Set font size to 22px for small screens */
     font-size: 22px;
