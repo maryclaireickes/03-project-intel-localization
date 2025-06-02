@@ -237,7 +237,7 @@ a {color: #003366;
     display: block;
   }
   .learn-more-btn {
-    /* Add space below the button when stacked vertically */
-    margin-bottom: 50px;
+    /* Reduce space below the button when stacked vertically */
+    margin-bottom: 20px;
   }
 }
